@@ -1,0 +1,192 @@
+/* Reset για όλα τα στοιχεία */
+	* {margin: 0; padding: 0; box-sizing: border-box; 
+	
+	/* βοηθά στο να υπολογίζονται σωστά οι διαστάσεις */}
+	
+
+	/*Διαχωρισμός h1 και h2 με class="contact-container" για τοποθέτηση στο ίδιο οριζόντιο axis */
+	
+	
+	.contact-container 
+	{
+    display: flex;          /* Ενεργοποιεί το flexbox */
+    align-items: center;    /* Κεντράρει κατακόρυφα τα στοιχεία */
+	}
+	*/ 
+
+	.contact-container h1, 
+	.contact-container h2 	
+	{width: 50%;             /* Κάθε στοιχείο πιάνει το μισό πλάτος */
+	margin: 0;              /* Αφαιρεί το default margin των headings */}
+	*/
+
+
+
+
+
+
+
+	
+	h1 {padding:5px; color:white; font-family:Monospace; text-align:left; font-size:8px;}
+	header {position:fixed;  top:0;  left:0;  width:100%;  background-color:rgba(255, 255, 255, 1);      /* ξεκινάει πλήρως ορατό */ 
+			z-index:1000;  border-bottom:1px solid #ccc;  transition:background-color 0.3s ease;         /* ομαλή μετάβαση */}
+	nav {position:fixed; width:100%; top:61px; z-index:999;}
+	
+	
+	.contact-container {background-color:black; padding:8; margin:8; font-family:Monospace; font-size:13px; color:white;}
+	.topbar {display:flex; align-items:center; gap:12px;}
+	.social-icon svg {width:60px; fill: white; display:flex; align-items:center; gap:12px; transition: fill 0.3s ease; vertical-align:middle;}
+	.social-icon:hover svg {fill: red;}
+	
+	video-grid 	{
+				grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* αποτρέπει το "γιγάντωμα" του τελευταίου */
+				justify-content: center;   /* κεντράρει το σύνολο των στηλών */
+				justify-items: center;     /* κεντράρει κάθε item στο κελί του */
+				gap: 12px;
+				}
+
+	/* Ομοιόμορφο πλάτος στα items και πραγματικό centering */
+	.video-grid > *	{
+					width: 95%;         /* το “κενό” που ήθελες γύρω από το κάθε βίντεο */
+					max-width: 720px;   /* προαιρετικό καπάκι για μεγάλες οθόνες */
+					margin: 0 auto;					/* συμμετρικό κεντράρισμα */
+					
+					}
+
+	/* Τα ίδια τα βίντεο γεμίζουν το κουτί τους */
+	.video-grid iframe,
+	.video-grid video 	{
+						display: block;
+						width: 100%;
+						height: auto;
+						aspect-ratio: 16 / 9;
+						padding: 0;         /* το padding-left εδώ */
+						}
+	
+	.video-container {display:block; width:100%; height:auto; padding:0px; background-color: #3B2727; border: 1px solid; border-image: linear-gradient(to right, #7A5151, #D68E8E, #D6C188, #857754, #631D18) 1; padding:0px; background-color:#3B2727; align-items:center;}
+	.video-description {margin-bottom:10px;}
+
+	nav {background-color:#8F5F5F; padding:0px; text-align:center;}
+	body { background-color:#3B2727; position:relative; margin-top:123px; width:100%; min-width:800px;}	
+
+	
+
+
+	
+	#main-menu { display: flex; gap: 0; /* ή ό,τι διάστημα θέλω */ justify-content:justify; background-color: #8F5F5F; font-family: Monospace; font-size: 33px; text-align:justify;}
+	.nav-link {display:block; padding-left:6vh; padding-right:6vh; padding-bottom:12px; padding-top:12px; border:1px solid #3B2727; text-decoration: none; color: black; transition: background-color 0.3s ease;}
+	.nav-link:hover {background-color: #AB876F;}
+	.dropdown {position: relative; display: inline-block;}
+
+	.dropdown-con {display: none; position: absolute; background-color: #8F5F5F; min-width: 200px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1;}
+
+	.dropdown:hover .dropdown-con {display: block;}
+	.dropdown-item 	{
+					display: block;              /* ώστε να γεμίζει όλη τη γραμμή */
+					padding: 12px 16px;
+					text-decoration: none;
+					color: black;
+					transition: background-color 0.3s ease;
+					}
+
+	.dropdown-item:hover {background-color: #AB876F;   /* hover σε όλο το πλαίσιο */ color:white; }
+	
+	
+	
+	.home-title {text-align:center; padding-bottom:80px; padding-top:0px; color:white; font-family:Mansalva; system-ui; font-weight: 400; font-style: normal; font-size:64px; }                                     /* background-image: url('../Artwork/Kozani1.jpg'); */
+	.home-phrase {text-align:center; padding-bottom:10px; color:white; font-family:Courier New; font-size:22px; }
+	
+	.home-phrase span {opacity: 0; transition: opacity 0.3s ease; text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff;}
+	.home-phrase span.visible {opacity: 1;}
+	
+	.animated-bg 	{
+					position: relative;
+					width: 100%;
+					height: 50vh;             /* γεμίζει όλη την οθόνη */
+					overflow: auto;          /* κόβει ότι περισσεύει από το video */
+					display: flex;
+					flex-direction: column;
+					flex-wrap: wrap;
+					justify-content: center;   /* κάθετο κεντράρισμα */
+					align-items: center;       /* οριζόντιο κεντράρισμα */
+					text-align: center;
+					}
+					
+
+	.bg-video 	{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				flex-direction: column;
+				flex-wrap: wrap;
+				width: 100%;
+				height: 100%;
+				align-items: center;
+				object-fit: cover;         /* ίδιο με background-size: cover */
+				z-index: -1;               /* πάει πίσω από το περιεχόμενο */
+				}
+	
+	#about {background-color:#3B2727; text-align:center; color:black;}
+	#style-the-bio-title {width:800px; height:95px; border: 1px solid #946363; padding:10px; margin-left:auto; margin-right:auto; background-color:#AD8F8F; font-family:Monospace; font-size:64px; color:white;}
+	#style-the-bio {width:800px; height:1110px; border: 0px solid #946363; padding:25px; margin-left:auto; margin-right:auto; background-color:#AD8F8F; font-family:Cambria; font-size:20px;}
+	.pic-style {width:600px; height:auto;}
+	
+	#portfolio {background-color:#3B2727; text-align:center; padding-bottom:80px; color:white;}
+	#project-list-header {width:800px; height:102px; border:0px solid #946363; padding:10px; margin-left:auto; margin-right:auto; background-color:#AD8F8F; font-family:Monospace; font-size:64px;}
+	#project-list {width:800px; height:500px; border:1px solid #946363; padding:10px; margin-left:auto; margin-right:auto; background-color:#AD8F8F; font-family:Monospace; font-size:36px; }
+	#horizontal-line-1 {width:100%; height:2px; border:0px solid #8F5F5F; padding:0px; margin-left:auto; margin-right:auto; background-color:#8F5F5F; font-family:Monospace; font-size:32px;}
+	.style-the-portfolio-sub-menu {text-decoration:none; color:black; hover:white; border:1px solid #946363; border-radius:8px; padding:30px; padding-left:25%; padding-right:25%;}
+	.style-the-portfolio-sub-menu:hover {color:white;}
+	.scroll-link {text-decoration:none; text-align:center; color:black; hover:white; }
+	.scroll-link:hover {color:white;}
+	
+	h3 {width:100%; text-align:center;}
+	.series-all {font-family:Monospace; font-size:50px; text-decoration-line: underline;}
+	.contests-all {font-family:Monospace; font-size:50px; text-decoration-line: underline;}
+	#xaraktes-all {font-family:Monospace; font-size:48px;}
+	#Xaraktes-episodes {font-family:Monospace; font-size:28px;}
+	#IFMC-all {font-family:Monospace; font-size:48px;}
+	#IFMC-videos {font-family:Monospace; font-size:28px;}
+	.Ad-all {font-family:Monospace; font-size:48px; text-decoration-line: underline; }
+	#Ad-videos {font-family:Monospace; font-size:28px;}
+	
+	.animated-bg2 	{
+					position: relative;
+					width: 100%;
+					height: 60vh;             /* γεμίζει όλη την οθόνη */
+					overflow: hidden;          /* κόβει ότι περισσεύει από το video */
+					display: flex;
+					flex-direction: column;
+					justify-content: center;   /* κάθετο κεντράρισμα */
+					align-items: center;       /* οριζόντιο κεντράρισμα */
+					text-align: center;
+					}
+	
+	.bg-video1 	{
+				left: 0;
+				position: absolute;
+				object-fit: cover;         /* ίδιο με background-size: cover */
+				z-index: -1;               /* πάει πίσω από το περιεχόμενο */ 
+				float:left; width:50%; height:auto; }
+	
+	.bg-video2 	{
+				right: 0;
+				position: absolute;
+				object-fit: cover;         /* ίδιο με background-size: cover */
+				z-index: -1;               /* πάει πίσω από το περιεχόμενο */ 
+				float:left; width:50%; height:auto; 
+				}
+	
+	
+	#contact {background-color:#423131; text-align:center; padding-bottom:30px; color:white;}
+	.contact-title {font-family:Monospace; font-size:32px; letter-spacing:2px; text-decoration:underline;}
+	.contact-text {font-family:Monospace; font-size:20px; letter-spacing:1px;}
+	.fb-icon2 {width:28px; height:auto; vertical-align:middle;}
+	.insta-icon2 {width:28px; height:auto; vertical-align:middle;}
+	.mail-icon2 {width:28px; height:auto; vertical-align:middle;}
+	.tel-icon2 {width:28px; height:auto; vertical-align:middle;}
+	.info-text {font-family:Monospace;}
+	
+	.footer-style {background-color:#8F5F5F; color:black; font-family:Monospace; font-size:12px; text-align:right;}
+	footer {position:fixed;  bottom:0;  left:0;  width:100%;}
