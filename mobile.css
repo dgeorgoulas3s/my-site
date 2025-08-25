@@ -74,7 +74,7 @@
 
 	
 	#main-menu { display: flex; gap: 0; /* ή ό,τι διάστημα θέλω */ justify-content:justify; background-color: #8F5F5F; font-family: Monospace; font-size: 33px; text-align:justify; padding-right: max(12px, env(safe-area-inset-right)); flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;}
-	.nav-link {display:block; padding-left:6vh; padding-right:6vh; padding-bottom:12px; padding-top:12px; border:1px solid #3B2727; text-decoration: none; color: black; transition: background-color 0.3s ease;}
+	.nav-link {display:block; padding-left:4vh; padding-right:4vh; padding-bottom:12px; padding-top:12px; border:1px solid #3B2727; text-decoration: none; color: black; transition: background-color 0.3s ease;}
 	.nav-link:hover {background-color: #AB876F;}
 	.dropdown {position: relative; display: inline-block;}
 
@@ -191,4 +191,5 @@
 	.footer-style {background-color:#8F5F5F; color:black; font-family:Monospace; font-size:12px; text-align:right;}
 
 	footer {position:fixed;  bottom:0;  left:0;  width:100%;}
+
 
